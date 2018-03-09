@@ -1,7 +1,7 @@
 {
   "name": "modoki",
   "description": "Get 'modoki' value immidiately",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "types": "dist/modoki.d.ts",
   "main": "dist/modoki.js",
   "umd:main": "dist/modoki.umd.js",
@@ -36,8 +36,7 @@
     "tslint": "^5.9.1",
     "typescript": "^2.7.2"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "jest": {
     "moduleFileExtensions": [
       "ts",
