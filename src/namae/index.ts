@@ -1,23 +1,33 @@
+import {Generator} from '../Generator';
 import {sei} from './sei';
 import {mei} from './mei';
 
-class NamaeGenerator {
+class NamaeGenerator implements Generator {
   private readonly sei: string[] = sei;
   private readonly mei: [string[], string[]] = mei;
 
-  generate(): string {
-    const sei = this.sei[Math.floor(Math.random() * this.sei.length - 1)];
+  private getSei(): string {
+    return this.sei[Math.floor(Math.random() * this.sei.length - 1)];
+  }
+
+  private getMei(): string {
     const sex = Math.round(Math.random());
     const meiList = this.mei[sex];
-    const mei = meiList[Math.floor(Math.random() * meiList.length - 1)];
 
-    return `${sei} ${mei}`;
+    return meiList[Math.floor(Math.random() * meiList.length - 1)];
+  }
+
+  generate() {
+    const acc: [string, string] = [
+      this.getSei(),
+      this.getMei(),
+    ];
+
+    return acc.join(' ');
 
   }
 }
 
 const namaeGenerator = new NamaeGenerator();
 
-export const namae = () => {
-  return namaeGenerator.generate();
-}
+export const namae = () => namaeGenerator.generate();

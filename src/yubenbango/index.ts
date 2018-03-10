@@ -1,5 +1,7 @@
-class YubenbangoGenerator {
-  generate(): string {
+import {Generator} from '../generator';
+
+class YubenbangoGenerator implements Generator {
+  generate() {
     const acc: (string | number)[] = [];
     for (let i = 0; i < 7; i++) {
       acc.push(Math.round((Math.random() * 9)));
@@ -13,6 +15,4 @@ class YubenbangoGenerator {
 
 const yubenbangoGenerator = new YubenbangoGenerator();
 
-export const yubenbango = () => {
-  return yubenbangoGenerator.generate();
-}
+export const yubenbango = () => yubenbangoGenerator.generate();
