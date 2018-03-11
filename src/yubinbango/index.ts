@@ -1,7 +1,7 @@
 import {Generator} from '../generator';
 import {getArrayBy, getRandomInt} from '../helpers';
 
-class YubenbangoGenerator implements Generator {
+class YubinbangoGenerator implements Generator {
   generate() {
     const arr = getArrayBy(getRandomInt({length: 9}), 7);
     (arr as (string | number)[]).splice(3, 0, '-');
@@ -10,6 +10,6 @@ class YubenbangoGenerator implements Generator {
   }
 }
 
-const yubenbangoGenerator = new YubenbangoGenerator();
+const yubinbangoGenerator = new YubinbangoGenerator();
 
-export const yubenbango = () => yubenbangoGenerator.generate();
+export const yubinbango = () => yubinbangoGenerator.generate();
