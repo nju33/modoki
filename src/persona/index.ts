@@ -1,12 +1,14 @@
 import {Generator} from '../generator';
 import {namae} from '../namae';
-import {yubenbango} from '../yubenbango';
+import {denwabango} from '../denwabango';
+import {yubinbango} from '../yubinbango';
 
 class PersonaGenerator implements Generator {
   generate() {
     return {
       name: namae(),
-      zipcode: yubenbango(),
+      phoneNumber: denwabango(),
+      zipcode: yubinbango(),
     }
   }
 }
