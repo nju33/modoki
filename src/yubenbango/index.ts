@@ -1,15 +1,12 @@
 import {Generator} from '../generator';
+import {getArrayBy, getRandomInt} from '../helpers';
 
 class YubenbangoGenerator implements Generator {
   generate() {
-    const acc: (string | number)[] = [];
-    for (let i = 0; i < 7; i++) {
-      acc.push(Math.round((Math.random() * 9)));
-    }
+    const arr = getArrayBy(getRandomInt({length: 9}), 7);
+    (arr as (string | number)[]).splice(3, 0, '-');
 
-    acc.splice(3, 0, '-');
-
-    return acc.join('');
+    return arr.join('');
   }
 }
 
