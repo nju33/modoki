@@ -1,3 +1,4 @@
+export * from './denwabango';
 export * from './namae';
-export * from './yubenbango';
+export * from './yubinbango';
 export * from './persona';
