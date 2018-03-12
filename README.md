@@ -20,12 +20,14 @@ yarn add [-D] modoki
 
 ```ts
 import {
-	namae,
-	denwabango
-	yubinbango,
+  namae,
+  jusyo,
+  denwabango
+  yubinbango,
 } from 'modoki';
 
 namae() // 佐藤 大翔
+jusyo() // ...
 denwabango() // 253-4107-23618 (\d{3,5}-\d{3,5}-\d{3,5})
 yubinbango() // 195-1972 (\d{3}-\d{4})
 ```
