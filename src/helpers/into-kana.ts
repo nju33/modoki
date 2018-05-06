@@ -45,6 +45,8 @@ map.set('ゑ', 'ヱ');
 map.set('を', 'ヲ');
 map.set('ん', 'ン');
 
-export const intoKana = (char: HiraganaChar) => {
-  return map.get(char);
-}
+export const intoKana = (chars: string) => {
+  return (chars.split('') as HiraganaChar[])
+    .map(char => map.get(char))
+    .join('');
+};

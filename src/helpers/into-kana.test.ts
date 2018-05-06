@@ -1,7 +1,7 @@
 import {intoKana} from './into-kana';
 
 describe('helpers::intoKana', () => {
-  test('will get ア by あ', () => {
-    expect(intoKana('あ')).toBe('ア');
+  test('will get アカサ by あかさ', () => {
+    expect(intoKana('あかさ')).toBe('アカサ');
   });
 });
